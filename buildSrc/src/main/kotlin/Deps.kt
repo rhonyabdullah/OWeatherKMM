@@ -21,6 +21,8 @@ class Deps {
         internal const val mokoMvvm = "0.8.0"
         internal const val lifecycleAndroid = "2.2.0"
         internal const val mokoResources = "0.13.1"
+        internal const val mokoGraphics = "0.4.0"
+        internal const val mokoParcelize = "0.4.0"
     }
 
     object Plugins {
@@ -64,6 +66,8 @@ class Deps {
             )
             const val mokoMvvm = "dev.icerock.moko:mvvm:${Versions.mokoMvvm}"
             const val mokoResources = "dev.icerock.moko:resources:${Versions.mokoResources}"
+            const val mokoGraphics = "dev.icerock.moko:graphics:${Versions.mokoGraphics}"
+            const val mokoParcelize = "dev.icerock.moko:parcelize:${Versions.mokoParcelize}"
         }
         object Android {
             val lifecycle = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleAndroid}"

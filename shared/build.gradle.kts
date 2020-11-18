@@ -36,6 +36,9 @@ dependencies {
     mppLibrary(Deps.Libs.MultiPlatform.sqlDelight)
 
     commonMainImplementation(Deps.Libs.MultiPlatform.mokoMvvm)
+    commonMainImplementation(Deps.Libs.MultiPlatform.mokoResources)
+    commonMainImplementation(Deps.Libs.MultiPlatform.mokoGraphics)
+    commonMainImplementation(Deps.Libs.MultiPlatform.mokoParcelize)
     //endregion
 
     //region android
