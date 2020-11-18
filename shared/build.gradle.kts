@@ -35,8 +35,8 @@ dependencies {
 
     mppLibrary(Deps.Libs.MultiPlatform.sqlDelight)
 
-    commonMainImplementation(Deps.Libs.MultiPlatform.mokoMvvm)
-    commonMainImplementation(Deps.Libs.MultiPlatform.mokoResources)
+    commonMainApi(Deps.Libs.MultiPlatform.mokoMvvm.common)
+    commonMainApi(Deps.Libs.MultiPlatform.mokoResources.common)
     commonMainImplementation(Deps.Libs.MultiPlatform.mokoGraphics)
     commonMainImplementation(Deps.Libs.MultiPlatform.mokoParcelize)
     //endregion
@@ -59,6 +59,8 @@ sqldelight {
 
 // optional for export dependencies into framework header
 framework {
+    export(Deps.Libs.MultiPlatform.mokoMvvm)
+    export(Deps.Libs.MultiPlatform.mokoResources)
 //    export(project = project(":myproject"))
 //    export(kotlinNativeExportable = MultiPlatfomLibrary(<...>))
 //    export(kotlinNativeExportable = MultiPlatfomModule(<...>))
