@@ -24,7 +24,10 @@ kotlin {
 
 dependencies {
     //region common
-    commonMainImplementation(Deps.Libs.MultiPlatform.coroutines)
+    commonMainImplementation(Deps.Libs.MultiPlatform.coroutines) {
+        // we should force native-mt version for ktor 1.4.0 on iOS
+        isForce = true
+    }
 
     mppLibrary(Deps.Libs.MultiPlatform.ktorClient)
     commonMainImplementation(Deps.Libs.MultiPlatform.ktorClientLogging)
@@ -35,7 +38,10 @@ dependencies {
 
     mppLibrary(Deps.Libs.MultiPlatform.sqlDelight)
 
-    commonMainImplementation(Deps.Libs.MultiPlatform.mokoMvvm)
+    commonMainApi(Deps.Libs.MultiPlatform.mokoMvvm.common)
+    commonMainApi(Deps.Libs.MultiPlatform.mokoResources.common)
+    commonMainImplementation(Deps.Libs.MultiPlatform.mokoGraphics)
+    commonMainImplementation(Deps.Libs.MultiPlatform.mokoParcelize)
     //endregion
 
     //region android
@@ -56,6 +62,8 @@ sqldelight {
 
 // optional for export dependencies into framework header
 framework {
+    export(Deps.Libs.MultiPlatform.mokoMvvm)
+    export(Deps.Libs.MultiPlatform.mokoResources)
 //    export(project = project(":myproject"))
 //    export(kotlinNativeExportable = MultiPlatfomLibrary(<...>))
 //    export(kotlinNativeExportable = MultiPlatfomModule(<...>))

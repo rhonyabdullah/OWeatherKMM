@@ -21,6 +21,8 @@ class Deps {
         internal const val mokoMvvm = "0.8.0"
         internal const val lifecycleAndroid = "2.2.0"
         internal const val mokoResources = "0.13.1"
+        internal const val mokoGraphics = "0.4.0"
+        internal const val mokoParcelize = "0.4.0"
     }
 
     object Plugins {
@@ -62,8 +64,18 @@ class Deps {
                 android = "com.squareup.sqldelight:android-driver:${Versions.sqlDelight}",
                 ios = "com.squareup.sqldelight:native-driver:${Versions.sqlDelight}"
             )
-            const val mokoMvvm = "dev.icerock.moko:mvvm:${Versions.mokoMvvm}"
-            const val mokoResources = "dev.icerock.moko:resources:${Versions.mokoResources}"
+            val mokoMvvm = MultiPlatformLibrary(
+                common = "dev.icerock.moko:mvvm:${Versions.mokoMvvm}",
+                iosX64 = "dev.icerock.moko:mvvm-iosx64:${Versions.mokoMvvm}",
+                iosArm64 = "dev.icerock.moko:mvvm-iosarm64:${Versions.mokoMvvm}"
+            )
+            val mokoResources = MultiPlatformLibrary(
+                common = "dev.icerock.moko:resources:${Versions.mokoResources}",
+                iosX64 = "dev.icerock.moko:resources-iosx64:${Versions.mokoResources}",
+                iosArm64 = "dev.icerock.moko:resources-iosarm64:${Versions.mokoResources}"
+            )
+            const val mokoGraphics = "dev.icerock.moko:graphics:${Versions.mokoGraphics}"
+            const val mokoParcelize = "dev.icerock.moko:parcelize:${Versions.mokoParcelize}"
         }
         object Android {
             val lifecycle = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleAndroid}"

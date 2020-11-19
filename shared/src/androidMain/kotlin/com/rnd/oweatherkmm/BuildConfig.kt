@@ -1,6 +1,6 @@
 package com.rnd.oweatherkmm
 
-import com.rnd.oweatherkmm.android.BuildConfig
+import com.rnd.oweatherkmm.android.shared.BuildConfig
 
 /**
  * Project OWeatherKMM.
