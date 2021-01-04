@@ -1,7 +1,10 @@
 import SwiftUI
+import MultiPlatformLibrary
+import MultiPlatformLibraryMvvm
 
 func greet() -> String {
-    return "greet"
+    let says = Greeting(hello: "Hello", world: "World")
+    return "\(says.hello) \(says.world)!"
 }
 
 struct ContentView: View {

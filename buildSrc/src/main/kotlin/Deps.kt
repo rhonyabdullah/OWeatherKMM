@@ -12,17 +12,17 @@ class Deps {
     }
 
     object Versions {
-        const val kotlin = "1.4.10"
+        const val kotlin = "1.4.21"
         const val sqlDelight = "1.4.4"
-        internal const val kotlinxSerialization = "1.0.0-RC"
+        internal const val kotlinxSerialization = "1.0.1"
         internal const val kodeinDi = "7.1.0"
-        internal const val coroutines = "1.3.9-native-mt-2"
-        internal const val ktorClient = "1.4.1"
-        internal const val mokoMvvm = "0.8.0"
+        internal const val coroutines = "1.4.2-native-mt"
+        internal const val ktorClient = "1.5.0"
+        internal const val mokoMvvm = "0.8.1"
         internal const val lifecycleAndroid = "2.2.0"
-        internal const val mokoResources = "0.13.1"
-        internal const val mokoGraphics = "0.4.0"
-        internal const val mokoParcelize = "0.4.0"
+        internal const val mokoResources = "0.13.2"
+        internal const val mokoGraphics = "0.5.0"
+        internal const val mokoParcelize = "0.5.0"
     }
 
     object Plugins {
@@ -53,7 +53,8 @@ class Deps {
             val ktorClient = MultiPlatformLibrary(
                 common = "io.ktor:ktor-client-core:${Versions.ktorClient}",
                 android = "io.ktor:ktor-client-android:${Versions.ktorClient}",
-                ios = "io.ktor:ktor-client-ios:${Versions.ktorClient}"
+                iosX64 = "io.ktor:ktor-client-core-iosx64:${Versions.ktorClient}",
+                iosArm64 = "io.ktor:ktor-client-core-iosarm64:${Versions.ktorClient}",
             )
             const val ktorClientLogging = "io.ktor:ktor-client-logging:${Versions.ktorClient}"
             const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
@@ -62,7 +63,8 @@ class Deps {
             val sqlDelight = MultiPlatformLibrary(
                 common = "com.squareup.sqldelight:runtime:${Versions.sqlDelight}",
                 android = "com.squareup.sqldelight:android-driver:${Versions.sqlDelight}",
-                ios = "com.squareup.sqldelight:native-driver:${Versions.sqlDelight}"
+                iosX64 = "com.squareup.sqldelight:native-driver:${Versions.sqlDelight}",
+                iosArm64 = "com.squareup.sqldelight:native-driver:${Versions.sqlDelight}"
             )
             val mokoMvvm = MultiPlatformLibrary(
                 common = "dev.icerock.moko:mvvm:${Versions.mokoMvvm}",
@@ -78,7 +80,7 @@ class Deps {
             const val mokoParcelize = "dev.icerock.moko:parcelize:${Versions.mokoParcelize}"
         }
         object Android {
-            val lifecycle = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleAndroid}"
+            const val lifecycle = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleAndroid}"
         }
     }
 

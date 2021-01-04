@@ -7,6 +7,6 @@ import org.kodein.di.DI
  *
  * Created by Rhony on 11/16/20.
  */
-val DataInjector = DI.Module(name = "DataModule") {
-
-}
+//val DataInjector = DI.Module(name = "DataModule") {
+//
+//}

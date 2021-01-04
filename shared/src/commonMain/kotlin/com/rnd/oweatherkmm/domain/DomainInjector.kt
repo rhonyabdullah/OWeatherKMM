@@ -7,6 +7,6 @@ import org.kodein.di.DI
  *
  * Created by Rhony on 11/16/20.
  */
-internal val DomainInjector = DI.Module(name = "DomainInjector") {
-
-}
+//internal val DomainInjector = DI.Module(name = "DomainInjector") {
+//
+//}

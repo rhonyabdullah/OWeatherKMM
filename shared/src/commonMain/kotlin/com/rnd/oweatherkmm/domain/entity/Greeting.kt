@@ -3,5 +3,4 @@ package com.rnd.oweatherkmm.domain.entity
 import kotlinx.serialization.Serializable
 
 @Serializable
-class Greeting {
-}
+data class Greeting(val hello: String, val world: String)

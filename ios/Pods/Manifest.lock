@@ -16,7 +16,7 @@ PODS:
   - MultiPlatformLibraryMvvm/SkyFloatingLabelTextField (0.3.0):
     - MultiPlatformLibrary
     - SkyFloatingLabelTextField
-  - SkyFloatingLabelTextField (3.8.0)
+  - SkyFloatingLabelTextField (4.0.0)
 
 DEPENDENCIES:
   - Alamofire (= 4.9.1)
@@ -47,7 +47,7 @@ SPEC CHECKSUMS:
   AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
   MultiPlatformLibrary: b1ef488d85fd7cb42d39aefb68fbb91de8953264
   MultiPlatformLibraryMvvm: 999ac3896d8214fd65e0e0a376a2e553bf4515b3
-  SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
+  SkyFloatingLabelTextField: 79ddc40e4ad59707fedbb48d605417aee48bb78a
 
 PODFILE CHECKSUM: 7d7eb5b35f8a15484166b17d1a2ab424e38a91dd
 
